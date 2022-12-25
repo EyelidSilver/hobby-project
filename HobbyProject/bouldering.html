@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bouldering</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            font-family: monospace;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            font-family: monospace;
+        }
+        
+        .footer{
+            text-align: center;
+            font-size: 14px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .behance {
+            text-decoration: none;
+        }
+
+        .main-text {
+            line-height: 19px;
+        }
+
+        .contentContainer {
+            background-color: #ffffff;
+            width: 500px;
+            padding: 20px 40px;
+            border-radius: 10px;
+            display: block;
+            margin: 30px auto
+        }
+
+        .bouldering-intro-picture {
+            border-radius: 7px;
+            transition: all 200ms ease-in-out;
+            margin-top: 20px;
+        }
+
+        .bouldering-intro-picture:hover {
+            filter: brightness(130%);
+            transform: scale(1.1);
+        }
+
+        .wikiLink {
+            font-weight: bold;
+        }
+
+        .dark {
+            background-color: #4A39FF;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 30px;
+            transition: all 250ms ease-in-out;
+        }
+
+        .dark:hover {
+            filter: contrast(70%);
+        }
+
+        .learnAbout {
+            border: solid 1px #4a39ff;
+            color: #4a39ff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 30px;
+            transition: all 250ms ease-in-out;
+            background-color: #fff;
+            margin: 50px auto;
+        }
+
+        .learnAbout:hover {
+            background-color: #4a39ff;
+            color: #fff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+            margin: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .grid img {
+            transition: all 180ms ease-in-out;
+        }
+
+        .grid img:hover {
+            transform: scale(2);
+            filter: brightness(130%);
+        }
+
+         .darkMode {
+            background: #191a2c;
+            color: #fff;
+        }
+
+        .darkMode .contentContainer {
+            background-color: #28293d;
+            color: #fff;
+        }
+
+        .darkMode .dark {
+            background-color: #bcb6ff;
+            color: #191a2c;
+        }
+
+        .darkMode .learnAbout {
+            background-color: #4A39FF;
+            color: #fff;
+        }
+
+        .darkMode .learnAbout:hover {
+            background-color: #4a39ff7c;
+            color: #fff;
+        }
+
+        .darkMode a {
+            color: plum;
+        }
+
+         .light {
+            background-color: #fff;
+            color: #28293d;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+    <button class="dark">Dark Mode</button>
+    <div class="contentContainer">
+    <h1>What is bouldering?</h1>
+    <h2>My favorite hobby</h2>
+    <a href="https://en.wikipedia.org/wiki/Bouldering" target="_blank"><img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/506/original/1.jpg?1669575386"
+      alt=""
+      class="bouldering-intro-picture"
+    /></a>
+    <div class="grid">
+        <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/509/original/4.jpg?1669575400"
+      alt=""
+        />
+    
+        <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/507/original/2.jpg?1669575391"
+      alt=""
+        />
+        <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/508/original/3.jpg?1669575396"
+      alt=""
+        />
+        
+        <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/511/original/6.jpg?1669575409"
+      alt=""
+        />
+    </div>
+    
+    <p class="main-text">
+      Bouldering is a form of free climbing that is performed on small rock
+      formations or artificial rock walls without the use of ropes or harnesses.
+      While bouldering can be done without any equipment, most climbers use
+      climbing shoes to help secure footholds, chalk to keep their hands dry and
+      to provide a firmer grip, and bouldering mats to prevent injuries from
+      falls.
+    </p>
+    <p class="wikiLink">📖 <a href="https://en.wikipedia.org/wiki/Bouldering">Read on Wikipedia</a></p>
+    <a href="https://www.behance.net/ayta19516bac?tracking_source=search_users|aita%20kirillina" target="_blank" class="behance"> <button  class="learnAbout">Follow me on Behance</button></a>
+    <p class="footer">Coded by <a href="https://www.instagram.com/eyelid_silver/" target="_blank">Aitalina K</a> with HTML, CSS and JavaScript</p>
+    </div>
+    </main>
+    <script>
+      let body = document.querySelector("body");
+      let button = document.querySelector("button");
+
+      function activateDarkMode() {
+        button.classList.toggle("light");
+        body.classList.toggle("darkMode");
+      }
+
+      function buttonTextToggle() {
+        if (button.innerHTML === "Dark Mode") {
+          button.innerHTML = "Light Mode";
+        } else {
+          button.innerHTML = "Dark Mode";
+        }
+      }
+
+      button.addEventListener("click", activateDarkMode);
+      button.addEventListener("click", buttonTextToggle);
+    </script>
+  </body>
+</html>
